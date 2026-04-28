@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mkqs40i0xrat"
-path="res://.godot/imported/dungeon tileset.png-b3858666056b0ef84b22039389a900a5.ctex"
+uid="uid://bkvenreodserw"
+path="res://.godot/imported/wizard(f).png-d6c6c30f1ebf5cafdc7804f4984bc0a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tilemaps/dungeon tileset.png"
-dest_files=["res://.godot/imported/dungeon tileset.png-b3858666056b0ef84b22039389a900a5.ctex"]
+source_file="res://portrait/wizard(f).png"
+dest_files=["res://.godot/imported/wizard(f).png-d6c6c30f1ebf5cafdc7804f4984bc0a6.ctex"]
 
 [params]
 
