@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dojlej74a6u56"
-path="res://.godot/imported/ranger.png-9e86ddf7cfb160bab90ccc3ded09c0c9.ctex"
+uid="uid://dcf1f8l3575yr"
+path="res://.godot/imported/warrior_male.png-f4dd13d90c00d51c6065a3bf9e5cfb94.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprite/ranger.png"
-dest_files=["res://.godot/imported/ranger.png-9e86ddf7cfb160bab90ccc3ded09c0c9.ctex"]
+source_file="res://sprite/warrior_male.png"
+dest_files=["res://.godot/imported/warrior_male.png-f4dd13d90c00d51c6065a3bf9e5cfb94.ctex"]
 
 [params]
 

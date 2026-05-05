@@ -1,97 +1,97 @@
 [gd_scene format=3 uid="uid://bgn8u812srscx"]
 
 [ext_resource type="Script" uid="uid://13ugfedgjsno" path="res://script/character_selection.gd" id="1_ci3hj"]
-[ext_resource type="Texture2D" uid="uid://tr62icx7hkvo" path="res://portrait/cleric(m).png" id="1_sl7g1"]
-[ext_resource type="Texture2D" uid="uid://dnv4cfckno0om" path="res://portrait/cleric(f).png" id="2_x0k4l"]
-[ext_resource type="Texture2D" uid="uid://thcofckbvbev" path="res://portrait/ranger(f).png" id="4_mxb7q"]
-[ext_resource type="Texture2D" uid="uid://dhbmhpgb1gi23" path="res://portrait/ranger(m).png" id="5_kjwij"]
-[ext_resource type="Texture2D" uid="uid://bkvenreodserw" path="res://portrait/wizard(f).png" id="6_sxjpy"]
-[ext_resource type="Texture2D" uid="uid://530jh13sh8ld" path="res://portrait/wizard(m).png" id="7_w7eue"]
-[ext_resource type="Texture2D" uid="uid://b3euvc5ndyotg" path="res://portrait/warrior(f).png" id="8_ud5dw"]
-[ext_resource type="Texture2D" uid="uid://85mtldbq1vhi" path="res://portrait/warrior(m).png" id="9_l5g1m"]
+[ext_resource type="Texture2D" uid="uid://c68xthvwn8bys" path="res://portrait/cleric(f).png" id="2_x0k4l"]
+[ext_resource type="Texture2D" uid="uid://tr62icx7hkvo" path="res://portrait/cleric(m).png" id="3_mxb7q"]
+[ext_resource type="Texture2D" uid="uid://thcofckbvbev" path="res://portrait/ranger(f).png" id="4_kjwij"]
+[ext_resource type="Texture2D" uid="uid://cu547bwh2f3mp" path="res://portrait/ranger(m).png" id="5_sxjpy"]
+[ext_resource type="Texture2D" uid="uid://bkvenreodserw" path="res://portrait/wizard(f).png" id="6_w7eue"]
+[ext_resource type="Texture2D" uid="uid://530jh13sh8ld" path="res://portrait/wizard(m).png" id="7_ud5dw"]
+[ext_resource type="Texture2D" uid="uid://b3euvc5ndyotg" path="res://portrait/warrior(f).png" id="8_l5g1m"]
+[ext_resource type="Texture2D" uid="uid://85mtldbq1vhi" path="res://portrait/warrior(m).png" id="9_oh2f5"]
 
-[node name="CharacterSelection" type="CanvasLayer" unique_id=1886089725]
+[node name="CharacterSelection" type="CanvasLayer" unique_id=1627949624]
 script = ExtResource("1_ci3hj")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1460160390]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1760808841]
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="GridContainer" type="GridContainer" parent="VBoxContainer" unique_id=589323243]
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer" unique_id=2090646542]
 layout_mode = 2
 columns = 4
 
-[node name="TextureButton" type="TextureButton" parent="VBoxContainer/GridContainer" unique_id=186168518]
-custom_minimum_size = Vector2(280, 320)
+[node name="PriestessBtn" type="TextureButton" parent="VBoxContainer/GridContainer" unique_id=398099465]
+custom_minimum_size = Vector2(280, 280)
 layout_mode = 2
 texture_normal = ExtResource("2_x0k4l")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="TextureButton2" type="TextureButton" parent="VBoxContainer/GridContainer" unique_id=1018531932]
-custom_minimum_size = Vector2(280, 320)
+[node name="PriestBtn2" type="TextureButton" parent="VBoxContainer/GridContainer" unique_id=910827428]
+custom_minimum_size = Vector2(280, 280)
 layout_mode = 2
-texture_normal = ExtResource("1_sl7g1")
+texture_normal = ExtResource("3_mxb7q")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="TextureButton3" type="TextureButton" parent="VBoxContainer/GridContainer" unique_id=1925258083]
-custom_minimum_size = Vector2(280, 320)
+[node name="ArcheressBtn" type="TextureButton" parent="VBoxContainer/GridContainer" unique_id=1602700792]
+custom_minimum_size = Vector2(280, 280)
 layout_mode = 2
-texture_normal = ExtResource("4_mxb7q")
+texture_normal = ExtResource("4_kjwij")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="TextureButton4" type="TextureButton" parent="VBoxContainer/GridContainer" unique_id=1986398183]
-custom_minimum_size = Vector2(280, 320)
+[node name="ArcherBtn" type="TextureButton" parent="VBoxContainer/GridContainer" unique_id=1752316822]
+custom_minimum_size = Vector2(280, 280)
 layout_mode = 2
-texture_normal = ExtResource("5_kjwij")
+texture_normal = ExtResource("5_sxjpy")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="TextureButton5" type="TextureButton" parent="VBoxContainer/GridContainer" unique_id=1100062649]
-custom_minimum_size = Vector2(280, 320)
+[node name="WitchBtn" type="TextureButton" parent="VBoxContainer/GridContainer" unique_id=1783247490]
+custom_minimum_size = Vector2(280, 280)
 layout_mode = 2
-texture_normal = ExtResource("6_sxjpy")
+texture_normal = ExtResource("6_w7eue")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="TextureButton6" type="TextureButton" parent="VBoxContainer/GridContainer" unique_id=2066060572]
-custom_minimum_size = Vector2(280, 320)
+[node name="WizardBtn" type="TextureButton" parent="VBoxContainer/GridContainer" unique_id=755832281]
+custom_minimum_size = Vector2(280, 280)
 layout_mode = 2
-texture_normal = ExtResource("7_w7eue")
+texture_normal = ExtResource("7_ud5dw")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="TextureButton7" type="TextureButton" parent="VBoxContainer/GridContainer" unique_id=1501524799]
-custom_minimum_size = Vector2(280, 320)
+[node name="ShieldMaidenBtn" type="TextureButton" parent="VBoxContainer/GridContainer" unique_id=346480632]
+custom_minimum_size = Vector2(280, 280)
 layout_mode = 2
-texture_normal = ExtResource("8_ud5dw")
+texture_normal = ExtResource("8_l5g1m")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="TextureButton8" type="TextureButton" parent="VBoxContainer/GridContainer" unique_id=1125933902]
-custom_minimum_size = Vector2(280, 320)
+[node name="WarriorBtn" type="TextureButton" parent="VBoxContainer/GridContainer" unique_id=57383398]
+custom_minimum_size = Vector2(280, 280)
 layout_mode = 2
-texture_normal = ExtResource("9_l5g1m")
+texture_normal = ExtResource("9_oh2f5")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="VBoxContainer" unique_id=1311677781]
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1716193269]
 layout_mode = 2
-text = "Escolha seu personagem"
+text = "Escolha seu personagem!"
 horizontal_alignment = 1
 
-[node name="ConfirmButton" type="Button" parent="VBoxContainer" unique_id=1105286156]
+[node name="ConfirmButton" type="Button" parent="VBoxContainer" unique_id=973361356]
 layout_mode = 2
-text = "Jogar
-"
+text = "Jogar!"
 
-[connection signal="pressed" from="VBoxContainer/GridContainer/TextureButton" to="." method="_on_character_selected" binds= ["cleriga"]]
-[connection signal="pressed" from="VBoxContainer/GridContainer/TextureButton2" to="." method="_on_character_selected" binds= ["clerigo"]]
-[connection signal="pressed" from="VBoxContainer/GridContainer/TextureButton3" to="." method="_on_character_selected" binds= ["maga"]]
-[connection signal="pressed" from="VBoxContainer/GridContainer/TextureButton4" to="." method="_on_character_selected" binds= ["mago"]]
-[connection signal="pressed" from="VBoxContainer/GridContainer/TextureButton5" to="." method="_on_character_selected" binds= ["arqueira"]]
-[connection signal="pressed" from="VBoxContainer/GridContainer/TextureButton6" to="." method="_on_character_selected" binds= ["arqueiro"]]
-[connection signal="pressed" from="VBoxContainer/GridContainer/TextureButton7" to="." method="_on_character_selected" binds= ["guerreira"]]
-[connection signal="pressed" from="VBoxContainer/GridContainer/TextureButton8" to="." method="_on_character_selected" binds= ["guerreiro"]]
+[connection signal="pressed" from="VBoxContainer/GridContainer/PriestessBtn" to="." method="_on_texture_button_pressed" binds= ["cleriga"]]
+[connection signal="pressed" from="VBoxContainer/GridContainer/PriestBtn2" to="." method="_on_texture_button_pressed" binds= ["clerigo"]]
+[connection signal="pressed" from="VBoxContainer/GridContainer/ArcheressBtn" to="." method="_on_texture_button_pressed" binds= ["arqueria"]]
+[connection signal="pressed" from="VBoxContainer/GridContainer/ArcherBtn" to="." method="_on_texture_button_pressed" binds= ["arqueiro"]]
+[connection signal="pressed" from="VBoxContainer/GridContainer/WitchBtn" to="." method="_on_texture_button_pressed" binds= ["maga"]]
+[connection signal="pressed" from="VBoxContainer/GridContainer/WizardBtn" to="." method="_on_texture_button_pressed" binds= ["mago"]]
+[connection signal="pressed" from="VBoxContainer/GridContainer/ShieldMaidenBtn" to="." method="_on_texture_button_pressed" binds= ["guerreira"]]
+[connection signal="pressed" from="VBoxContainer/GridContainer/WarriorBtn" to="." method="_on_texture_button_pressed" binds= ["guerreiro"]]
+[connection signal="pressed" from="VBoxContainer/ConfirmButton" to="." method="_on_confirm_button_pressed"]

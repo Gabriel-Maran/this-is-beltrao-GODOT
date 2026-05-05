@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbdb7g0vb0l4g"
-path="res://.godot/imported/dungeon tileset.png-3877f8b3026d4f37cde533346620bf79.ctex"
+uid="uid://bhsjxl0q3br87"
+path="res://.godot/imported/ranger_female.png-a1adc11303d9817bd0e65411529987b2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tileset/dungeon tileset.png"
-dest_files=["res://.godot/imported/dungeon tileset.png-3877f8b3026d4f37cde533346620bf79.ctex"]
+source_file="res://sprite/ranger_female.png"
+dest_files=["res://.godot/imported/ranger_female.png-a1adc11303d9817bd0e65411529987b2.ctex"]
 
 [params]
 

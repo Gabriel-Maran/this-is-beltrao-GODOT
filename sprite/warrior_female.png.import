@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://w51weucbxgw"
-path="res://.godot/imported/cleric.png-5cbd5221353c3e334e31a6afb379fc5f.ctex"
+uid="uid://cxkeses457157"
+path="res://.godot/imported/warrior_female.png-474cca4fe02b19cd06432c47378ed19f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprite/cleric.png"
-dest_files=["res://.godot/imported/cleric.png-5cbd5221353c3e334e31a6afb379fc5f.ctex"]
+source_file="res://sprite/warrior_female.png"
+dest_files=["res://.godot/imported/warrior_female.png-474cca4fe02b19cd06432c47378ed19f.ctex"]
 
 [params]
 

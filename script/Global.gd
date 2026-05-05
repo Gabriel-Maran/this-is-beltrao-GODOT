@@ -1,59 +1,48 @@
-extends Node
 #Script GLOBAL
+extends Node2D
 
-var characteres_data = {
+var characters_data = {
 	"cleriga":{
-		"name" : "Cleriga",
+		"name" : "Clériga",
 		"portrait" : "res://portrait/cleric(f).png",
-		"sprite_sheet" : "res://sprite/cleric.png",
-		"offset_frame" : 50#(Coluna x  Linha)
+		"sprite_sheet" : "res://sprite/cleric_female.png",
 	},
 	"clerigo":{
-		"name" : "Clerigo",
+		"name" : "Clérigo",
 		"portrait" : "res://portrait/cleric(m).png",
-		"sprite_sheet" : "res://sprite/cleric.png",
-		"offset_frame" : 0#(Linha x  coluna)
+		"sprite_sheet" : "res://sprite/cleric_male.png",
 	},
 	"maga":{
-		"name" : "Mago",
+		"name" : "Maga",
 		"portrait" : "res://portrait/wizard(f).png",
-		"sprite_sheet" : "res://sprite/wizard.png",
-		"offset_frame" : 50#(Linha x  coluna)
+		"sprite_sheet" : "res://sprite/wizard_female.png",
 	},
 	"mago":{
-		"name" : "Cleriga",
+		"name" : "Mago",
 		"portrait" : "res://portrait/wizard(m).png",
-		"sprite_sheet" : "res://sprite/wizard.png",
-		"offset_frame" : 0#(Coluna x  Linha)
-	},
-	"arqueira":{
-		"name" : "Arqueira",
-		"portrait" : "res://portrait/ranger(f).png",
-		"sprite_sheet" : "res://sprite/ranger.png",
-		"offset_frame" : 50#(Coluna x  Linha)
-	},
-	"arqueiro":{
-		"name" : "arqueiro",
-		"portrait" : "res://portrait/ranger(m).png",
-		"sprite_sheet" : "res://sprite/ranger.png",
-		"offset_frame" : 0#(Coluna x  Linha)
+		"sprite_sheet" : "res://sprite/wizard_male.png",
 	},
 	"guerreira":{
 		"name" : "Guerreira",
 		"portrait" : "res://portrait/warrior(f).png",
-		"sprite_sheet" : "res://sprite/warrior.png",
-		"offset_frame" : 50#(Coluna x  Linha)
+		"sprite_sheet" : "res://sprite/warrior_female.png",
 	},
 	"guerreiro":{
 		"name" : "Guerreiro",
 		"portrait" : "res://portrait/warrior(m).png",
-		"sprite_sheet" : "res://sprite/warrior.png",
-		"offset_frame" : 0#(Coluna x  Linha)
+		"sprite_sheet" : "res://sprite/warrior_male.png",
+	},
+	"arquerira":{
+		"name" : "Arqueira",
+		"portrait" : "res://portrait/ranger(f).png",
+		"sprite_sheet" : "res://sprite/ranger_female.png",
+	},
+	"arqueiro":{
+		"name" : "Arqueiro",
+		"portrait" : "res://portrait/ranger(m).png",
+		"sprite_sheet" : "res://sprite/ranger_male.png",
 	}
 }
 
-#Variavel que guarda o ID do personagem escolhido 
-
+#Varaivel que guarda o ID do personagem escolhido
 var selected_char_key : String = ""
-
-#Um dicionario CHAVE -> VALOR

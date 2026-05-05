@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://k5aduooomeje"
-path="res://.godot/imported/warrior.png-1c8cc945868e09661f1f1cbc922327aa.ctex"
+uid="uid://pyflsulevaqw"
+path="res://.godot/imported/wizard_female.png-0e7e3fd2be4a2b8102fec0b3539210b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprite/warrior.png"
-dest_files=["res://.godot/imported/warrior.png-1c8cc945868e09661f1f1cbc922327aa.ctex"]
+source_file="res://sprite/wizard_female.png"
+dest_files=["res://.godot/imported/wizard_female.png-0e7e3fd2be4a2b8102fec0b3539210b4.ctex"]
 
 [params]
 
