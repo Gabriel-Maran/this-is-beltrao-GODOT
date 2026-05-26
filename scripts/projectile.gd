@@ -44,7 +44,7 @@ func _on_body_entered(body: Node):
 	# Acertou um personagem vivo — aplica dano e some
 	if body is CharacterBody2D and body.has_method("receber_dano") and not body.is_dead:
 		print("Projetil, acertou um jogador")
-		body.receber_dano.rpc_id(1, body.get_path(), dano)
+		CombatProxy.solicitar_dano(body, dano)
 		queue_free()
 		return
 

@@ -17,6 +17,10 @@ func _ready():
 
 # Chamado quando o jogador clica em um personagem na tela de seleção.
 # Recebe a chave do personagem clicado (ex: "char_2").
+#----------------------------------------------------------------------#
+### QUAL PADRÃO DE PROJETO PODE SER IDENTIFICADO NESTA FUNÇÃO? ###
+### o -> diz que é um OBSERVABLE
+#----------------------------------------------------------------------#
 func _on_personagem_clicado(chave: String):
 	Global.selected_char_key = chave                              # Salva globalmente o personagem escolhido
 	var nome = Global.characters_data[chave].name                 # Busca o nome do personagem nos dados globais

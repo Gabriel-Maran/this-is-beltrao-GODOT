@@ -1,3 +1,8 @@
+#----------------------------------------------------------------------#
+### QUAL PADRÃO DE PROJETO PODE SER IDENTIFICADO NESTE ARQUIVO? ###
+### SINGLETON
+#----------------------------------------------------------------------#
+
 # res://scripts/Global.gd
 extends Node
  
@@ -45,7 +50,7 @@ var characters_data = {
 	},
 	"char_1": {
 		"name": "Clerigo",
-		"portrait": "res://sprites/portraits/cleric(m)",
+		"portrait": "res://sprites/portraits/cleric(m).png",
 		"sprite_sheet": "res://sprites/cleric_male.png",
 		"class": "Cleric"
 	},

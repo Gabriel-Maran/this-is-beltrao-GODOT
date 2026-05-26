@@ -1,5 +1,4 @@
 
-
 # res://scripts/unit.gd
 # Controla o personagem no mapa: movimento, animações, combate e morte.
 # Combate é autoritativo no servidor — só o servidor aplica e valida o dano.
@@ -27,6 +26,11 @@ var is_attacking = false
 var is_dead = false
 
 # Cena do projétil — carregada apenas se a classe usa projétil
+#----------------------------------------------------------------------#
+### QUAL PADRÃO DE PROJETO PODE SER IDENTIFICADO NESTA FUNÇÃO? ###
+#----------------------------------------------------------------------#
+###FLYWEIGHT
+
 var projectile_scene = preload("res://scenes/projectile.tscn")
 
 # Configura o personagem com os dados vindos de Global.characters_data.
@@ -97,6 +101,12 @@ func _sincronizar_animacao(nome_anim: String, flip_h: bool):
 		anim_player.play(nome_anim)
 
 # Ponto de entrada do ataque, chamado pelo jogador local.
+#----------------------------------------------------------------------#
+### QUAL PADRÃO DE PROJETO PODE SER IDENTIFICADO NESTA FUNÇÃO? ###
+### FACTORY METHOD, para fabricar o atacar
+### COMAND 
+### STATE
+#----------------------------------------------------------------------#
 func atacar():
 	is_attacking = true
 	velocity = Vector2.ZERO
@@ -135,14 +145,14 @@ func _executar_ataque_melee():
 	melee_area.monitoring = true
 	# Força a atualização física para detectar sobreposições imediatamente
 	await get_tree().physics_frame
-	#melee_area.monitoring = false
+	melee_area.monitoring = false
 
 	# Verifica todos os corpos dentro do hitbox
+	# get_overlapping_bodies() retorna CharacterBody2D diretamente (não Area2D)
 	for alvo in melee_area.get_overlapping_bodies():
-		# Garante que o alvo é outra Unit, está viva e não é o próprio atacante
+		# Garante que o alvo é outra Unit e não é o próprio atacante
 		if alvo is CharacterBody2D and alvo != self:
-			# Envia o pedido de dano ao servidor (apenas o servidor aplica dano)
-			receber_dano.rpc_id(1, alvo.get_path(), damage)
+			CombatProxy.solicitar_dano(alvo, damage)
 
 # --- Projétil ---
 # Instancia o projétil e o lança na direção que o personagem está olhando.
@@ -170,7 +180,7 @@ func receber_dano(alvo_path: NodePath, valor: int):
 	if not multiplayer.is_server():
 		return
 
-	var alvo = get_tree().root.get_node_or_null(alvo_path)
+	var alvo = get_node_or_null(alvo_path)
 	if alvo == null:
 		return
 
@@ -179,16 +189,16 @@ func receber_dano(alvo_path: NodePath, valor: int):
 	_aplicar_hp.rpc(alvo_path, novo_hp)
 
 # RPC do servidor para todos: atualiza o HP do alvo e dispara a morte se necessário.
-@rpc("any_peer", "call_local", "reliable")
+@rpc("authority", "call_local", "reliable")
 func _aplicar_hp(alvo_path: NodePath, novo_hp: int):
-	var alvo = get_tree().root.get_node_or_null(alvo_path)
+	var alvo = get_node_or_null(alvo_path)
 	if alvo == null:
 		return
 
 	alvo.current_hp = novo_hp
 	print("[%s] HP: %d / %d" % [alvo.name, alvo.current_hp, alvo.max_hp])
 
-	if alvo.current_hp <= 0:
+	if alvo.current_hp <= 0 and not alvo.is_dead:
 		alvo._morrer()
 
 # Toca a animação de morte e remove o nó ao terminar.

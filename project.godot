@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Global="*uid://b3oerfgegjyu3"
 NetworkManager="*uid://cio5iu0r78al8"
+CombatProxy="*uid://bssdnb1cggb73"
 
 [display]
 

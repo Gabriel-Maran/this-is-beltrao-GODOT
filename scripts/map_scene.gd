@@ -10,6 +10,7 @@ extends Node2D
 @onready var camera = $Camera2D              # Câmera 2D que seguirá o herói local
 
 # Cena do personagem (unit) que será instanciada para cada jogador.
+###FLYWEIGHT
 var unit_scene = preload("res://scenes/unit.tscn")
 
 # Lista de posições de spawn no tilemap (em coordenadas de tile), uma por jogador.
@@ -31,7 +32,8 @@ func _ready():
 	else:
 		# Remove esta linha ↓ — o servidor vai fazer isso via rpc
 		# adicionar_jogador(multiplayer.get_unique_id())
-		pedir_spawn_existentes.rpc_id(1)  
+		pedir_spawn_existentes.rpc_id(1)                                 # Pede ao servidor os jogadores já presentes
+
 # Sinal disparado pelo servidor quando um novo peer se conecta.
 # Notifica todos os peers existentes para criarem o personagem do novo jogador.
 func _on_novo_peer_conectado(novo_id: int):
@@ -39,6 +41,10 @@ func _on_novo_peer_conectado(novo_id: int):
 
 # RPC que só o servidor pode chamar, mas também executa localmente.
 # Garante que todos os peers (incluindo o servidor) instanciem o personagem do jogador indicado.
+#----------------------------------------------------------------------#
+### QUAL PADRÃO DE PROJETO PODE SER IDENTIFICADO NESTA FUNÇÃO? ###
+#----------------------------------------------------------------------#
+### TODA RPC é um FACTORY METHOD
 @rpc("authority", "call_local", "reliable")
 func adicionar_jogador_em_todos(id: int):
 	adicionar_jogador(id)    # Chama a função local de instanciação para o ID recebido
